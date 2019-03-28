@@ -9,6 +9,8 @@ public class MaquinaDispensadora {
 	    Producto barra = new Producto("Barra Tosh Lyne X 23g", "003", 12, 1.120);
 	    Producto bimbo = new Producto("Bimboletes Bimbo sabor a coco X 40g", "004", 12, 1.250);
 	    Producto choclitos = new Producto("Choclito Limon X 27g", "005", 12, 900);
+	    
+	    System.out.println("choclitos");
 	}
 
 }
