@@ -2,29 +2,28 @@ package mateo.tobon.dispensador.Model;
 
 public class Producto {
 
-	public Producto() {
-	}
 
 	private String nombre;
 	private String codigo;
-	private int unidades;
+	private int unidadesProducto;
 	private double precio;
 
-	public Producto(String nombre, String codigo, int unidades, double precio) {
+	public Producto(String nombre, String codigo, int unidadesProducto, double precio) {
 		
 		this.nombre = nombre;
 		this.codigo = codigo;
-		this.unidades = unidades;
+		this.unidadesProducto = unidadesProducto;
 		this.precio = precio;
 		
-		
 	}
-	public int getUnidades() {
-		return unidades;
+	
+	
+	public int getUnidadesProducto() {
+		return unidadesProducto;
 	}
 
-	public void setUnidades(int unidades) {
-		this.unidades = unidades;
+	public void setUnidadesProducto(int unidadesProducto) {
+		this.unidadesProducto = unidadesProducto;
 	}
 
 	public double getPrecio() {
@@ -43,5 +42,33 @@ public class Producto {
 		return codigo;
 	}
 
-
+	
+	
+	//Metodo remover producto
+	public void removerProducto() {
+		 this.unidadesProducto = unidadesProducto -1;
+		 
+		
+		}
+	
+	
+	//Metodo aumentar producto
+	public boolean aumentarUnidadesProducto(int cantidadAAumentar) {
+		if (unidadesProducto < 12 ) {
+			if(unidadesProducto + cantidadAAumentar > 12) {
+				return false;
+			}
+			else {
+				this.unidadesProducto += cantidadAAumentar;
+				return true;
+			}
+		}
+		
+		else {
+			return true;
+		}
+	}
+		
 }
+
+
