@@ -8,29 +8,25 @@ public class Dispensador {
 	private ArrayList<Producto> productos;
 	private int cantidadDeProductos = 10;
 
-	//constructor maquina
+	
 	
 	public Dispensador(String nombre){
 		this.nombre = nombre;
 		
 	}
 	
-
-	//metodo para retirar producto por nombre o codigo
-	
-	public void retirarProducto(String nombreOCodigoProducto) {
+	public void retirarProducto(String NombreoCodigo) {
 		ArrayList<Producto> listaProductos = getProductos();
 		for (int i = 0; i <  listaProductos.size(); i++) {
 			String nombres = listaProductos.get(i).getNombre();
 			String codigo = listaProductos.get(i).getCodigo();
-			if (nombres == nombreOCodigoProducto || codigo == nombreOCodigoProducto ){
+			if (nombres == NombreoCodigo || codigo == NombreoCodigo ){
 				listaProductos.get(i).removerProducto();
 			}
 		}
-}
+    } 
 	
-	//metodo para consultar nombres de los productos agotados
-	
+
 	public ArrayList<String> consultarProductosAgotados() {
 		ArrayList<String> nombresProductosAgotados = new ArrayList<String>();
 		ArrayList<Producto> productos = getProductos();
@@ -44,13 +40,11 @@ public class Dispensador {
 		return nombresProductosAgotados;
 	}
 	
-	//metodo para consultar el total de unidades de un producto en especifico
-	
+		
 	public int consultarTotalUnidadesDeProducto(Producto producto) {
-return producto.getUnidadesProducto();	
+        return producto.getUnidadesProducto();	
 }
 	
-	//metodo para consultar el total de unidades de todos los productos
 	public int consultarTotalUnidadesTodosProductos() {
 		ArrayList<Producto> productos = getProductos();
 		int sumatoria = 0;
@@ -61,14 +55,15 @@ return producto.getUnidadesProducto();
 		return sumatoria; 
 	}
 	
-	//metodo para aumentar la cantidad de un producto
-	
+		
 	public void aumentarCantidadUnidadesProducto(Producto producto, int cantidadAumentar) {
              producto.aumentarUnidadesProducto(cantidadAumentar);
-}
+            	
+	}
+            	 
+    
 	
-	//getters y setters
-	
+		 
 	public int getCantidadDeProductos() {
 		return cantidadDeProductos;
 	}

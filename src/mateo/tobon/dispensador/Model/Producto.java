@@ -23,7 +23,7 @@ public class Producto {
 	}
 
 	public void setUnidadesProducto(int unidadesProducto) {
-		this.unidadesProducto = unidadesProducto;
+		this.unidadesProducto = 12;
 	}
 
 	public double getPrecio() {
@@ -44,29 +44,26 @@ public class Producto {
 
 	
 	
-	//Metodo remover producto
-	public void removerProducto() {
+		public void removerProducto() {
 		 this.unidadesProducto = unidadesProducto -1;
 		 
 		
 		}
 	
 	
-	//Metodo aumentar producto
-	public boolean aumentarUnidadesProducto(int cantidadAAumentar) {
-		if (unidadesProducto < 12 ) {
+		public boolean aumentarUnidadesProducto(int cantidadAAumentar) {
+		if (unidadesProducto <= 12 ) {
 			if(unidadesProducto + cantidadAAumentar > 12) {
-				return false;
+				System.out.println("No se puede tener más de 12 unidades por producto. ");;
 			}
 			else {
 				this.unidadesProducto += cantidadAAumentar;
 				return true;
 			}
 		}
+		return true;
 		
-		else {
-			return true;
-		}
+		
 	}
 		
 }
