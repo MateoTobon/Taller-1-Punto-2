@@ -54,11 +54,11 @@ public class Producto {
 		public boolean aumentarUnidadesProducto(int cantidadAAumentar) {
 		if (unidadesProducto <= 12 ) {
 			if(unidadesProducto + cantidadAAumentar > 12) {
-				System.out.println("No se puede tener más de 12 unidades por producto. ");;
+				System.out.println("No se puede tener más de 12 unidades por producto, la cantidad de: ");
 			}
 			else {
 				this.unidadesProducto += cantidadAAumentar;
-				return true;
+				System.out.println("La cantidad aumentada de: ");
 			}
 		}
 		return true;
